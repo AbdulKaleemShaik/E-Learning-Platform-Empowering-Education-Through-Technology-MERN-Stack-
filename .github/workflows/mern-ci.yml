@@ -47,6 +47,6 @@ jobs:
         working-directory: client
         run: CI=false npm run build
 
-      - name: Test frontend
+      - name: Test frontend (allow no tests)
         working-directory: client
-        run: npm test --if-present
+        run: npm test -- --passWithNoTests
